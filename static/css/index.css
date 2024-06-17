@@ -13,7 +13,7 @@ body {
     margin-bottom: 5px;
 }
 
-.mathvista {
+.model {
   font-variant: small-caps;
   font-weight: bold;
 }
@@ -142,6 +142,23 @@ body {
   height: 6em;
   margin: 10px;
   padding: 10px;
+}
+
+.publication-authors
+{
+  font-size: 1000px;
+}
+
+.left
+{
+  float: left;
+  width: 50%;
+}
+
+.right
+{
+  float: right;
+  width: 50%;
 }
 
 @media screen and (max-width: 768px) {
