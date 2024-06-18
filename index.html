@@ -34,23 +34,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="./static/css/leaderboard.css">
+  <link rel="stylesheet" href="./static/css/my.css">
 
   <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
   <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
-  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/bulma-carousel.js"></script>
+  <script src="./static/js/bulma-slider.js"></script>
   <script src="./static/js/explorer-index.js"></script>
   <script src="./static/js/question_card.js"></script>
-
-  <script src="./static/js/leaderboard_testmini.js"></script>
-  <script src="./data/results/output_folders.js" defer></script>
-  <script src="./data/results/model_scores.js" defer></script>
-
-  <script src="./visualizer/data/data_public.js" defer></script>
+  <script src="./static/js/leaderboard.js"></script>
 </head>
 
 <body>
@@ -100,45 +95,46 @@
               Synthetic Abstract Image and Visual Reasoning Instruction Using Language Model
             </h2>
             <div class="is-size-5 publication-authors">
-              <!-- tag3
-            <span class="author-block">
-              <a href="https://lupantech.github.io/">Pan Lu</a><sup style="color:#6fbf73;">1</sup>,</span>
-            <span class="author-block">
-              <a href="https://sites.google.com/view/hbansal">Hritik Bansal</a><sup style="color:#6fbf73;">1</sup>,</span>
-            <span class="author-block">
-              <a href="https://tonyxia2001.github.io/">Tony Xia</a><sup style="color:#6fbf73;">1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://liujch1998.github.io/">Jiacheng Liu</a><sup style="color:#ed4b82">2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://chunyuan.li/">Chunyuan Li</a><sup style="color:#ffac33">3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a><sup style="color:#ed4b82">2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://sites.google.com/site/hcheng2site/Home">Hao Cheng</a><sup style="color:#ffac33">3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a><sup style="color:#6fbf73;">1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/mgalley/?from=https://research.microsoft.com/~mgalley&type=exact">Michel Galley</a><sup style="color:#ffac33">3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/jfgao/">Jianfeng Gao</a><sup style="color:#ffac33">3</sup>
-            </span>
-          -->
+              <span class="author-block">
+                <a>Wenqi Zhang</a>,
+              </span>
+              <span class="author-block">
+                <a>Zhenglin Cheng</a>,
+              </span>
+              <span class="author-block">
+                <a>Tony Xia</a>,
+              </span>
+              <span class="author-block">
+                <a>Yuanyu He</a>,
+              </span>
+              <span class="author-block">
+                <a>Mengna Wang</a>,
+              </span>
+              <span class="author-block">
+                <a>Yongliang Shen</a>,
+              </span>
+              <span class="author-block">
+                <a>Zeqi Tan</a>,
+              </span>
+              <span class="author-block">
+                <a>Guiyang Hou</a>,
+              </span>
+              <span class="author-block">
+                <a>Mingqian He</a>,
+              </span>
+              <span class="author-block">
+                <a>Yanna Ma</a>,
+              </span>
+              <span class="author-block">
+                <a>Weiming Lu</a>,
+              </span>
+              <span class="author-block">
+                <a>Yueting Zhuang,
+              </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <!-- tag3
-            <span class="author-block"><sup style="color:#63ba67;">1</sup>University of California, Los Angeles,</span><br>
-            <span class="author-block"><sup style="color:#ed4b82">2</sup>University of Washington,</span>
-            <span class="author-block"><sup style="color:#ffac33">3</sup>Microsoft Research</span><br>
-            <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span>
-          -->
+              <span class="author-block">Zhejiang University</span><br>
             </div>
 
             <!-- <section> -->
@@ -220,39 +216,30 @@
 
   <section class="section">
     <div class="container" style="margin-bottom: 2vh;">
-      <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            Although most current large multimodal mod-
-            els (LMMs) can already understand photos of
-            natural scenes and portraits, their understand-
+            Although most current large multimodal models (LMMs) can already understand photos of
+            natural scenes and portraits, their understand
             ing of abstract images, e.g., charts, maps, or
-            layouts, and visual reasoning capabilities re-
-            mains quite rudimentary. They often struggle
+            layouts, and visual reasoning capabilities remains quite rudimentary. They often struggle
             with simple daily tasks, such as reading time
             from a clock, understanding a flowchart, or
             planning a route using a road map. In light
             of this, we design a multi-modal self-instruct,
             utilizing large language models and their code
-            capabilities to synthesize massive abstract im-
-            ages and visual reasoning instructions across
-            daily scenarios. Our strategy effortlessly cre-
-            ates a multimodal benchmark with 11,193 in-
-            structions for eight visual scenarios: charts, ta-
-            bles, simulated maps, dashboards, flowcharts,
+            capabilities to synthesize massive abstract images and visual reasoning instructions across
+            daily scenarios. Our strategy effortlessly creates a multimodal benchmark with 11,193 in-
+            structions for eight visual scenarios: charts, tables, simulated maps, dashboards, flowcharts,
             relation graphs, floor plans, and visual puzzles.
             This benchmark, constructed with simple
             lines and geometric elements, exposes the
             shortcomings of most advanced LMMs like
-            GPT-4V and Llava in abstract image under-
-            standing, spatial relations reasoning, and visual
-            element induction. Besides, to verify the qual-
-            ity of our synthetic data, we fine-tune an LMM
+            GPT-4V and Llava in abstract image understanding, spatial relations reasoning, and visual
+            element induction. Besides, to verify the quality of our synthetic data, we fine-tune an LMM
             using 62,476 synthetic chart, table and road
-            map instructions. The results demonstrate im-
-            proved chart understanding and map navigation
+            map instructions. The results demonstrate improved chart understanding and map navigation
             performance, and also demonstrate potential
             benefits for other visual reasoning tasks.
           </div>
@@ -260,30 +247,6 @@
       </div>
     </div>
   </section>
-
-  <!--
-  <section class="section">
-    <div class="container" style="margin-bottom: 2vh;">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Introduction</h2>
-          <div class="content has-text-justified">
-            <b>Large Multimodal Models (LMMs)</b> exhibit impressive problem-solving skills in many tasks and domains,
-            but their ability in <b>visual reasoning</b> tasks is still lacking. An intuitive explanation is that
-            current training data contains abundant object recognition and scene description tasks, while
-            <b>high-quality image-text pair data</b> related to daily activities and work is significantly lack- ing.
-            Collecting such data could significantly enhance the capabilities of multimodal models and pave the way for
-            embodied intelligence. We advocate a <b>code-centric self-instruct strategy</b> to synthesize non natural
-            images with aligned questions and answers for LMMs. Our multi-modal self-instruct is an LLM-driven data
-            generation strategy capable of precisely producing rich and aligned image-text paired data across various
-            daily scenarios.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  --->
-
   <section class="section">
     <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
       <div class="columns is-centered m-6">
@@ -291,156 +254,98 @@
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/examples/Performance.png" alt="geometric reasoning" width="70%" />
+                <img src="static/images/examples/newPerformance.png" alt="geometric reasoning" width="200%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content">
+                <div class="has-text-centered">
+                  <img src="static/images/examples/ChartExamples/PieChart.png" alt="arithmetic reasoning" width="35%" />
+                  <img src="static/images/examples/ChartExamples/LineChart.png" alt="algebraic reasoning" width="55%" />
+                </div>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <h4>
-                  <img src="static/images/smallicon/Map.png" alt="geometric reasoning" width="1.9%" />
-                  City Road Map
-                </h4>
-                <img src="static/images/examples/Map.png" alt="geometric reasoning" width="30%" />
-                <p>
-                  <b> Question: </b> The starting point ismarked in red, and the endpointis in yellow.
-                  <b class="best-score-text"> Please find a path from the starting to the endpoint.</b>
-                </p>
-                <p>
-                  <b>Answer: </b> Start from the red point, move upwards to 7s, and then move to the right to L1...
-                </p>
-              </div>
-            </div>
+                <img src="static/images/examples/ChartExamples/Table.png" alt="geometric reasoning" width="48%" />
+                <img src="static/images/examples/ChartExamples/BarChart.png" alt="logical reasoning" width="50%" />
 
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/examples/Puzzle1.png" alt="geometric reasoning" width="30%" />
-                <p>
-                  <b>Question: </b>Observe the image. Are all the images identical?
-                </p>
-                <p>
-                  <b>Answer: </b>No. Rationale: The cat in row 2 and column 4 is different ...
-                </p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered ">
-                <h4>
-                  <img src="static/images/smallicon/Puzzle.png" alt="geometric reasoning" width="1.9%" />
-                  Visual Puzzle
-                </h4>
-                <img src="static/images/examples/Puzzle2.png" alt="geometric reasoning" width="40%" />
-                <p>
-                  <b>Question: </b> Summarize the pattern and select an option to fill ?
-                </p>
-                <b>Answer: </b>B. The sides of the polygon are decreasing...
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <h4>
-                  <img src="static/images/smallicon/Layout.png" alt="geometric reasoning" width="1.9%" />
-                  House Layout
-                </h4>
-                <img src="static/images/examples/Layout.jpg" alt="geometric reasoning" width="20%" />
-                <p>
-                  <b>Question: </b>Does the smallest bedroom have a washroom?
-                </p>
-                <p>
-                  <b>Answer: </b>No. <b>Rationale: </b> The smallest bedroom is BedRoom1, and it does not..
-                </p>
+                <div class="images_container_horizontal">
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/MapExamples/Connectivity1.png" width="75%" />
+                    <img src="static/images/examples/MapExamples/Connectivity2.png" width="80%" />
+                  </div>
+                  <img src="static/images/examples/MapExamples/RelationGraph.png" alt="geometric reasoning"
+                    width="40%" />
+                </div>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <h4>
-                  <img src="static/images/smallicon/Dashboard.png" alt="geometric reasoning" width="1.9%" />
-                  Instrument Dashboard
-                </h4>
-                <img src="static/images/examples/Dashboard1.jpg" alt="geometric reasoning" width="21%" />
-                <img src="static/images/examples/Dashboard2.jpg" alt="geometric reasoning" width="20%" />
-                <p>
-                  <b>Question: </b>Today, I set off for
-                  another city 100 kilometers away.
-                  The clock shows my departure time,
-                  and the speedometer displays my
-                  car's speed. When will I arrive at the
-                  destination?
-                </p>
-                <p>
-                  <b>Answer: </b>10:00 AM. <b>Rationale: </b> Your departure time is 8:00 AM, and
-                  your car's speedometer shows 50
-                  km/h. The distance is 100 km.
-                  Therefore, you need to spend two
-                  hours on the road, and you will
-                  arrive at destination at 10:00 AM.
-                </p>
+                <div class="images_container_vertical">
+                  <div class="images_container_horizontal">
+                    <img src="static/images/examples/MapExamples/Map1.png" alt="statistical reasoning" width="30%" />
+                    <img src="static/images/examples/MapExamples/Map2.png" width="30%" />
+                  </div>
+                  <div class="images_container_horizontal">
+                    <img src="static/images/examples/MapExamples/Map3.png" width="30%" />
+                  </div>
+                </div>
               </div>
             </div>
             <div class="box m-5">
-              <div class="content has-text-centered ">
-                <h4>
-                  <img src="static/images/smallicon/Chart.png" alt="geometric reasoning" width="1.9%" />
-                  Chart
-                </h4>
-                <img src="static/images/examples/Chart.png" alt="geometric reasoning" width="40%" />
-                <p>
-                  <b>Question: </b> Summarize the pattern and select an option to fill ?
-                </p>
-                <b>Answer: </b>B. The sides of the polygon are decreasing...
-                <b>Rationale:</b>In 2020, China's GDP
-                was $14 trillion, while..
+              <div class="content has-text-centered">
+                <div class="images_container_horizontal">
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/Puzzle1.png" alt="geometric reasoning" width="60%" />
+                    <img src="static/images/examples/Puzzle12.png" width="70%" />
+                  </div>
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/Puzzle2.png" alt="geometric reasoning" width="180%" />
+                    <img src="static/images/examples/Puzzle22.png" width="100%" />
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <div class="images_container_horizontal">
+                  <img src="static/images/examples/RocketDiagram.png" width="50%" />
+                  <img src="static/images/examples/Layout.png" width="50%" />
+                </div>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <div class="images_container_horizontal">
+                  <img src="static/images/examples/Dashboard1.jpg" alt="geometric reasoning" width="31%" />
+                  <img src="static/images/examples/Dashboard2.png" width="30%" />
+                </div>
               </div>
             </div>
 
             <div class="box m-5">
               <div class="content has-text-centered ">
-                <h4>
-                  <img src="static/images/smallicon/Flowchart.png" alt="geometric reasoning" width="1.9%" />
-                  Chart
-                </h4>
-                <img src="static/images/examples/Flowchart.png" alt="geometric reasoning" width="40%" />
-                <p>
-                  <b>Question: </b> According to this
-                  flowchart, I input the numbers 2, 3,
-                  and 4. What is the final result?
-                </p>
-                <b>Answer: </b> 4.
-                <b>Rationale:</b>This
-                algorithm flowchart is designed to
-                find the maximum of three numbers
+                <div class="images_container_horizontal">
+                  <img src="static/images/examples/Instrument2.png" width="50%" />
+                  <img src="static/images/examples/Instrument.png" width="40%" />
+                </div>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered ">
-                <h4>
-                  <img src="static/images/smallicon/Diagram.png" alt="geometric reasoning" width="1.9%" />
-                  Chart
-                </h4>
-                <img src="static/images/examples/Diagram.jpg" alt="geometric reasoning" width="40%" />
-                <p>
-                  <b>Question: </b> According to this
-                  flowchart, after completing
-                  the paper registration, what
-                  should I do next?
-                </p>
-                <b>Answer: </b> You should Pay
-                Registration Fee.
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered ">
-                <h4>
-                  <img src="static/images/smallicon/Webpage.png" alt="geometric reasoning" width="1.9%" />
-                  Chart
-                </h4>
-                <img src="static/images/examples/Webpage.jpg" alt="geometric reasoning" width="30%" />
-                <p>
-                  <b>Question: </b> According to this
-                  flowchart, after completing the paper
-                  registration, what should I do next?
-                </p>
-                <b>Answer: </b> You should Pay
-                Registration Fee.
+                <div class="images_container_horizontal">
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/Workflow.png" alt="geometric reasoning" width="50%" />
+                    <img src="static/images/examples/Workflow2.png" width="80%" />
+                  </div>
+                  <img src="static/images/examples/FlowChart.png" width="50%" />
+                </div>
               </div>
             </div>
           </div>
@@ -448,170 +353,196 @@
       </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3" id="leaderboard_title">Leaderboard on Our Benchmark-11k </h2>
+          <p>
+            We evaluate the performance of many representative LMMs using our benchmark containing all tasks . We
+            observe that for these abstract images, even advanced LMMs like GPT-4V and Claude3 achieved only 49.5% and
+            50.1% accuracy on average for all tasks, leaving a significant gap to human-level performance (82.1%).
+          </p>
+          <div class="content">
+            <table id="leaderboard">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Name</th>
+                  <th>Chart</th>
+                  <th>Table</th>
+                  <th>Road Map</th>
+                  <th>Dashboard</th>
+                  <th>Relation Graph</th>
+                  <th>Flowchart</th>
+                  <th>Visual Puzzles</th>
+                  <th>Layout</th>
+                  <th><b class="best-score-text">Avg</b></th>
+                </tr>
+                <tr>
+                  <th>-</th>
+                  <th>Human*</th>
+                  <th>93.5</th>
+                  <th>95.1</th>
+                  <th>75</th>
+                  <th>85.3</th>
+                  <th>82.5</th>
+                  <th>65.5</th>
+                  <th>62.5</th>
+                  <th>97.6</th>
+                  <th>82.1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--leaderboard.json-->
+              </tbody>
+
+            </table>
+          </div>
+        </div>
+      </div>
+  </section>
 
   <!-- DATASET SECTION -->
   <section class="hero is-light is-small">
     <div class="hero-body has-text-centered">
-      <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
       <h1 class="title is-1 mathvista">
         <span class="model" style="vertical-align: middle">Dataset</span>
       </h1>
     </div>
   </section>
 
-
   <section class="section">
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <!-- <div class="column is-full-width has-text-centered"> -->
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Overview</h2>
+          <h2 class="title is-3">Introduction</h2>
           <div class="content has-text-justified">
-            <p>
-              We focus on several common scenarios in our paper: statistical charts, tables, flowcharts, and simplified
-              schematics, as well as typical real-life scenes: city road map, visual puzzle, house layout, and
-              instrument dashboard. All scenarios are presented in the form of images, e.g., a screenshot of a table or
-              a simulated city road map. We employ GPT-4-turbo to implement our synthesis process: idea proposal, code
-              generation, and question-answer pair construction. We generate approximately 500-1000 instructions for
-              each task, forming our mixed benchmark with a total of 7k testing instances. Additionally, considering the
-              importance of chart and road map understanding, we also synthesize two training sets for two tasks,
-              comprising 40k and 17k training instances, respectively. As shown in Table 1, we provide detailed
-              statistics about our synthesized dataset.
-            </p>
-            <div id="results-carousel" class="carousel results-carousel">
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/examples/Data.jpg" alt="arithmetic reasoning" width="70%" />
-                </div>
-              </div>
-              <div class="box m-5">
-                <div class="content has-text-centered">
-                  <img src="static/images/examples/Table1.png" alt="arithmetic reasoning" width="100%" />
-                  <p> Table 1: The statistics of our dataset, including eight tasks from work and life scenarios. All
-                    data were synthesized using our multi-modal self-instruct strategy.</p>
-                </div>
-              </div>
-            </div>
+            We identify that current LMMs have a significant gap compared to humans in understanding and visually
+            reasoning about abstract images, such as maps, charts, and layouts. Utilizing LLM and code, We design a
+            multimodal self-instruct strategy to synthesize a diverse set of abstract images and reasoning instructions,
+            providing value data for LMMs. We synthesized a benchmark of 11,193 highquality abstract images, covering
+            eight common scenarios. Our benchmark reveals significant deficiencies even in advanced LMMs. Besides, we
+            synthesized 62,476 chart and road map instructions for fine-tuning, verifying the effectiveness of the
+            synthesized data.
           </div>
+          <img src="static/images/examples/Table1.png" width="50%">
         </div>
       </div>
     </div>
   </section>
-
 
   <section class="section">
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <!-- <div class="column is-full-width has-text-centered"> -->
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Statistics</h2>
-          <p>
-          <ul>
-            <li><b>Chart and Table:</b>We
-              categorize the generated questions into five types:
-              OCR, chart caption, detailed perception (involving
-              issues of position, quantity, layout), data extraction,
-              and mathematical reasoning.
+          <h2 class="title is-3">Approach Overview</h2>
+          <div class="content has-text-justified">
+            Our multi-modal self-instruct is an LLM-driven data synthesis strategy capable of producing abstract images
+            and aligned reasoning instructions for various daily scenarios, including road maps, dashboards, 2D planar
+            layouts, charts, relation graphs, flowcharts, and visual puzzles.
+          </div>
+          <img src="static/images/examples/Data.jpg" width="90%">
+          <div class="content has-text-justified">
+            Firstly, our strategy can autonomously propose a creative idea for visual scenarios, e.g., using a
+            step-by-step flowchart to demonstrate how to attend an academy conference or designing road map . Then it
+            generates detailed code to visualize this idea. After synthesizing the desired image, LLMs self-instruct
+            multiple high-quality Q&A pairs for this visual content. The entire process is fully completed by the LLM
+            with a few demonstrations.
 
-            </li>
-            <div class="columns is-centered">
-              <div class="column" style="margin-right: -20rem;">
-                <div class="content has-text-centered">
-                  <img src="static/images/examples/ChartSta1.png" alt="data-overview" style="max-width: 85%;" />
-                  <p>
-                    The distribution of different types of charts.
-                  </p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="content has-text-centered">
-                  <img src="static/images/examples/ChartSta2.png" alt="data-composition" style="max-width: 64%;" />
-                  <p>
-                    The number of questions in each category.
-                  </p>
+          </div>
+          <div class="content has-text-justified">
+            We illustrate the entire process of our image-text synthesis, including using road maps for navigation,
+            interpreting pie charts, solving visual puzzles, and using operating workflow. For each scenario, we
+            synthesize multiple questions, annotated answers, and rationales. For example, in the pie chart case, the
+            LLM designs a multi-step math question about the difference between the largest and smallest categories.
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Fine-Turning Result</h2>
+          <div class="content has-text-justified">
+            In addition to constructing the benchmark, we fine-tuned the Llava-1.5-7B model using the training sets from
+            chart, table, and map tasks, and compared its performance with other baselines
+          </div>
+          <img src="static/images/examples/Table2.png" width="50%">
+          <div class="content has-text-justified">
+            We evaluate whether Llava-our-62k can generalize to other benchmarks, especially the tasks with significant
+            differences. These results show that our model can generalize to other types of visual reasoning tasks,
+            rather than merely fitting to the training scenarios.
+          </div>
+          <img src="static/images/examples/Table4.png" width="100%">
+        </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-full-width">
+          <h2 class="title is-3">Case</h2>
+          <div class="column is-full has-text-centered content">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <div class="box m-5">
+            <div class="content has-text-centered ">
+              <div class="images_container_horizontal">
+                <div class="images_container_vertical">
+                  <img src="static/images/examples/Case1.png" width="100%" />
                 </div>
               </div>
             </div>
-
-
-            <li><b>City Map Navigation:</b>When synthesizing
-              maps, the LLM first sets the map size, and path
-              complexity, i.e., walking direction, probability, and
-              maximum walking steps. Based on the path
-              complexity, we categorized all maps into five levels.
-              Most samples are of medium difficulty or higher,
-              with the statistical results</li>
-            <div class="columns is-centered">
-              <div class="column" style="margin-right: -20rem;">
-                <div class="content has-text-centered">
-                  <img src="static/images/examples/MapSta1.png" alt="data-composition" style="max-width: 50%;">
-                  <p> We categorize all city maps into five levels of complexity and presented their distribution.
-                  </p>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered ">
+              <div class="images_container_horizontal">
+                <div class="images_container_vertical">
+                  <img src="static/images/examples/Case2.png" width="100%" />
                 </div>
               </div>
             </div>
-          </ul>
-          </p>
-
-          <div class="columns is-centered m-6">
-            <div class="column is-full has-text-centered content">
-              <h2 class="title is-3">Examples</h2>
-              <p>Examples for each <b>visual reasoning</b> question
-              </p>
-
-              <div id="results-carousel" class="carousel results-carousel">
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/examples/ChartExamples/PieChart.png" alt="arithmetic reasoning"
-                      width="70%" />
-
-                  </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered ">
+              <div class="images_container_horizontal">
+                <div class="images_container_vertical">
+                  <img src="static/images/examples/Case3.png" width="100%" />
                 </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/examples/ChartExamples/LineChart.png" alt="algebraic reasoning"
-                      width="90%" />
-
-                  </div>
-                </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/examples/ChartExamples/Table.png" alt="geometric reasoning" width="65%" />
-
-                  </div>
-                </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/examples/ChartExamples/BarChart.png" alt="logical reasoning" width="90%" />
-
-                  </div>
-                </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/examples/ChartExamples/CompositeChart.png" alt="numeric reasoning"
-                      width="200%" />
-                    <img src="static/images/examples/ChartExamples/CompositeChart2.png" alt="numeric reasoning"
-                      width="40%" />
-                  </div>
-                </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/examples/MapExamples/Map1.png" alt="statistical reasoning" width="100%" />
-                  </div>
-                </div>
-                <div class="box m-5">
-                  <div class="content has-text-centered">
-                    <img src="static/images/examples/MapExamples/Map2.png" alt="scientific reasoning" width="100%" />
-                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered ">
+              <div class="images_container_horizontal">
+                <div class="images_container_vertical">
+                  <img src="static/images/examples/Case4.png" width="100%" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
-
 
 
   <!-- @PAN TODO: bibtex -->
