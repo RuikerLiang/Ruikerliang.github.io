@@ -31,12 +31,12 @@
   align-items: center;
 }
 .images_container_horizontal > * {
-  flex: 1; /* 让每个子元素均匀分配可用空间 */
-  margin: 0 8px; /* 可选：添加左右外边距，确保子元素之间有间距 */
+  flex: 1;
+  margin: 0 8px;
 }
 .images_container_horizontal2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 .images_container_horizontal3 {
