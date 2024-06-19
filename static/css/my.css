@@ -37,5 +37,10 @@
 .images_container_horizontal2 {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+.images_container_horizontal3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
