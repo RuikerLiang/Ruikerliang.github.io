@@ -102,9 +102,6 @@
                 <a>Zhenglin Cheng</a>,
               </span>
               <span class="author-block">
-                <a>Tony Xia</a>,
-              </span>
-              <span class="author-block">
                 <a>Yuanyu He</a>,
               </span>
               <span class="author-block">
@@ -151,23 +148,11 @@
             </div> -->
             <!-- </section> -->
 
+
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. -->
-                <span class="link-block">
-                  <!-- @PAN TODO: change links -->
-                  <!-- tag4 -->
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
                 <span class="link-block">
                   <a href="" class="external-link button is-normal is-rounded is-dark">
-                    <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
-                  class="external-link button is-normal is-rounded is-dark"> -->
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -197,7 +182,7 @@
                 </span>
                 <!-- Leaderboard Link. -->
                 <span class="link-block">
-                  <a href="https://Multimodal-Self-Instruct.github.io/#leaderboard"
+                  <a href="https://RuikerLiang.github.io/#leaderboard"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <p style="font-size:18px">🏆</p>
@@ -230,16 +215,16 @@
             of this, we design a multi-modal self-instruct,
             utilizing large language models and their code
             capabilities to synthesize massive abstract images and visual reasoning instructions across
-            daily scenarios. Our strategy effortlessly creates a multimodal benchmark with 11,193 in-
-            structions for eight visual scenarios: charts, tables, simulated maps, dashboards, flowcharts,
-            relation graphs, floor plans, and visual puzzles.
+            daily scenarios. Our strategy effortlessly <b>creates a multimodal benchmark with 11,193 in-
+              structions for eight visual scenarios: charts, tables, simulated maps, dashboards, flowcharts,
+              relation graphs, floor plans, and visual puzzles.</b>
             This benchmark, constructed with simple
             lines and geometric elements, exposes the
             shortcomings of most advanced LMMs like
             GPT-4V and Llava in abstract image understanding, spatial relations reasoning, and visual
             element induction. Besides, to verify the quality of our synthetic data, we fine-tune an LMM
-            using 62,476 synthetic chart, table and road
-            map instructions. The results demonstrate improved chart understanding and map navigation
+            <b>using 62,476 synthetic chart, table and road
+              map instructions.</b> The results demonstrate improved chart understanding and map navigation
             performance, and also demonstrate potential
             benefits for other visual reasoning tasks.
           </div>
@@ -254,33 +239,173 @@
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/examples/newPerformance.png" alt="geometric reasoning" width="200%" />
+                <img src="static/images/examples/Performance2.jpg" alt="geometric reasoning" width="200%" />
+              </div>
+              <div class="has-text-justified">
+                We leverage LLM and code to synthesize abstract images and self-instruct diverse reasoning instructions,
+                e.g., charts, road maps, dashboards, visual puzzles, and relation graphs. Unlike natural landscapes and
+                human photos, these non-natural images constructed with geometric elements require stronger perception
+                and spatial relation reasoning. Our benchmark indicates that current LMMs are far from human-level
+                performance. They even fail to complete simple daily tasks, e.g., reading the time on a clock or
+                planning a route using a map.
+
               </div>
             </div>
             <div class="box m-5">
               <div class="content">
                 <div class="has-text-centered">
-                  <img src="static/images/examples/ChartExamples/PieChart.png" alt="arithmetic reasoning" width="35%" />
-                  <img src="static/images/examples/ChartExamples/LineChart.png" alt="algebraic reasoning" width="55%" />
+                  <h3>
+                    Chart
+                  </h3>
+                  <div class="images_container_horizontal">
+                    <div class="images_container_vertical">
+                      <img src="static/images/examples/ChartExamples/PieChart.png" alt="arithmetic reasoning"
+                        width="100%" />
+                      <div class="has-text-justified">
+                        <p>
+                          "Q": "Which country has the highest Happiness Index?",
+                          <br>
+                          "A": "Finland"
+                        </p>
+                        <p>
+                          <span style="font-weight: bold;">Llava-v1.6-34b:</span> Finland <span
+                            style="color: red;">✔</span>
+                          <br>
+                          <span style="font-weight: bold;">Gemini-1.5-pro:</span> Finland <span
+                            style="color: red;">✔</span>
+                          <br>
+                          <span style="font-weight: bold;">GPT-4V:</span> Finland <span style="color: red;">✔</span>
+                          <br>
+                          <span style="font-weight: bold;">GPT-4o:</span> Finland <span style="color: red;">✔</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="images_container_vertical">
+                      <img src="static/images/examples/ChartExamples/LineChart.jpg" alt="algebraic reasoning"
+                        width="100%" />
+                      <div class="has-text-justified column is-four-fifths">
+                        <p>
+                          "Q": "What is the difference between the highest and lowest energy production from natural
+                          gas?",
+                          <br>
+                          "A": "14.6 Quadrillion Btu",
+                          <br>
+                          "Rationale": "... subtract the smallest value from the largest... 38.4 - 23.8 = 14.6
+                          Quadrillion Btu"
+                        </p>
+                        <p>
+                          <span style="font-weight: bold;">Gemini-1.5-pro:</span> highest … approximately 38. lowest …
+                          approximately 24… The difference is approximately 14 …<span style="color: green;">✔</span>
+                          <br>
+                          <span style="font-weight: bold;">GPT-4o:</span> The highest…approximately 44, and the
+                          lowest…about 22. the difference … approximately 22 <span style="color: red;">✗</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/examples/ChartExamples/Table.png" alt="geometric reasoning" width="48%" />
-                <img src="static/images/examples/ChartExamples/BarChart.png" alt="logical reasoning" width="50%" />
+                <h3>
+                  Table
+                </h3>
+                <div class="images_container_horizontal">
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/ChartExamples/Table.png" alt="geometric reasoning" width="50%" />
+                    <div class="has-text-justified">
+                      <p>
+                        "Q": "Please extract the chart's title."
+                        <br>
+                        "A": "Annual global food waste from 2000 to 2020"
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> Annual global food waste from 2000 to
+                        2020
+                        <span style="color: orange;">(millions of tonnes)</span> <span style="color: red;">✗</span>
+                        <br>
+                        <span style="font-weight: bold;">Gemini-1.5-pro:</span> Annual global food waste from 2000 to
+                        2020<span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4V:</span> Annual global food waste from 2000 to 2020<span
+                          style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> Annual global food waste from 2000 to 2020<span
+                          style="color: green;">✔</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/ChartExamples/BarChart.png" alt="logical reasoning" width="200%" />
+                    <div class="has-text-justified">
+                      <p>
+                        "Q": "How many different coloured bars are there?"
+                        <br>
+                        "A": "5"
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> 5 <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">Gemini-1.5-pro:</span> 5 <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4V:</span> five <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> five <span style="color: green;">✔</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
+                <h3>
+                  Relation Graph
+                </h3>
                 <div class="images_container_horizontal">
                   <div class="images_container_vertical">
-                    <img src="static/images/examples/MapExamples/Connectivity1.png" width="75%" />
-                    <img src="static/images/examples/MapExamples/Connectivity2.png" width="80%" />
+                    <img src="static/images/examples/MapExamples/Connectivity1.png" width="95%" />
+                    <div class="has-text-justified column is-four-fifths">
+                      <p>
+                        " Q": "Which city has the most directly reachable neighboring cities?" <br>
+                        "A": "City 6"
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> City 1 has the most directly reachable
+                        neighboring cities. It is connected to City 2, City 3, City 5, City 6, and City 7. <span
+                          style="color: red;">✗</span>
+                        <br>
+                        <span style="font-weight: bold;">Gemini-1.5-pro:</span> City 6 <span
+                          style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4V:</span> City 6 <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> City 6 <span style="color: green;">✔</span>
+                      </p>
+                    </div>
                   </div>
-                  <img src="static/images/examples/MapExamples/RelationGraph.png" alt="geometric reasoning"
-                    width="40%" />
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/MapExamples/Relation1.png" alt="geometric reasoning" width="87%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <strong>Question:</strong> Do Stellar Orbits and Particle Models belong to the same
+                        sub-disciplines?
+                        <br>
+                        <strong>Answer:</strong> No.
+                      </p>
+                      <p>
+                        <strong>Rationale:</strong> Particle Models are a sub subfield of Dark Matter, while Stellar
+                        Orbits fall under Galactic Dynamics.
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> Yes, Stellar Orbits and Particle Models
+                        belong to the same sub-disciplines within the field of astrophysics … <span
+                          style="color: red;">✗</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -288,25 +413,62 @@
               <div class="content has-text-centered">
                 <div class="images_container_vertical">
                   <div class="images_container_horizontal">
-                    <img src="static/images/examples/MapExamples/Map1.png" alt="statistical reasoning" width="30%" />
-                    <img src="static/images/examples/MapExamples/Map2.png" width="30%" />
+                    <img src="static/images/examples/MapExamples/Map1.png" alt="statistical reasoning" width="20%" />
+                    <img src="static/images/examples/MapExamples/Map2.png" width="20%" />
                   </div>
-                  <div class="images_container_horizontal">
-                    <img src="static/images/examples/MapExamples/Map3.png" width="30%" />
+                  <div class="has-text-justified is-four-fifths column">
+                    <p>
+                      <span style="font-weight: bold;">Llava-v1.6-34b:</span> Move up until … "t2” … Move right until …
+                      "m2" Move down until …"5k". Move left until…"L5" … Move down reach…"L4"… <span
+                        style="color: green;">✔</span> <span style="color: red;">Score = 1/1</span>
+                      <br>
+                      <span style="font-weight: bold;">Gemini-1.5-pro:</span> Move right until … "m2" Move right until…
+                      "8e" Move downwards until …"5K" Move downwards until …"L5" Move downwards until "L4" … end point.
+                      <span style="color: red;">✗</span> <span style="color: red;">Score = 0.7/1</span>
+                      <br>
+                      <span style="font-weight: bold;">GPT-4V:</span> Move upwards until … "t2"…move right reach …"m2" …
+                      Move downwards reach "7B" … Move right…Move downwards … reach "L4" <span
+                        style="color: red;">✗</span> <span style="color: red;">Score = 0.7/1</span>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
+                <h3>
+                  Puzzle
+                </h3>
                 <div class="images_container_horizontal">
                   <div class="images_container_vertical">
-                    <img src="static/images/examples/Puzzle1.png" alt="geometric reasoning" width="60%" />
-                    <img src="static/images/examples/Puzzle12.png" width="70%" />
+                    <img src="static/images/examples/Puzzle1.png" alt="geometric reasoning" width="80%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <span style="font-weight: bold;">&#9650; Question:</span> Observe the image. <span
+                          style="color: red;">Are all the images identical?</span>
+                        <br>
+                        <span style="font-weight: bold;">Answer:</span> No. <span
+                          style="font-weight: bold;">Rationale:</span> The cat in row 4 and column 4 is different …
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">GPT-4V:</span> No, …unique cat is located in the fourth row and
+                        third column from the top left corner. <span style="color: red;">✗</span>
+                      </p>
+                    </div>
                   </div>
                   <div class="images_container_vertical">
                     <img src="static/images/examples/Puzzle2.png" alt="geometric reasoning" width="180%" />
-                    <img src="static/images/examples/Puzzle22.png" width="100%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <span style="font-weight: bold;">&#9650; Question:</span> Select an option to fill?
+                        <br>
+                        <span style="font-weight: bold;">Answer:</span> B. The sides are decreasing…
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> …without more clear pattern difficult to
+                        predict … <span style="color: red;">✗</span>
+                      </p>
+                    </div>
                   </div>
 
                 </div>
@@ -314,37 +476,183 @@
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <div class="images_container_horizontal">
-                  <img src="static/images/examples/RocketDiagram.png" width="50%" />
-                  <img src="static/images/examples/Layout.png" width="50%" />
-                </div>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <div class="images_container_horizontal">
-                  <img src="static/images/examples/Dashboard1.jpg" alt="geometric reasoning" width="31%" />
-                  <img src="static/images/examples/Dashboard2.png" width="30%" />
-                </div>
-              </div>
-            </div>
-
-            <div class="box m-5">
-              <div class="content has-text-centered ">
-                <div class="images_container_horizontal">
-                  <img src="static/images/examples/Instrument2.png" width="50%" />
-                  <img src="static/images/examples/Instrument.png" width="40%" />
-                </div>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered ">
+                <h3>
+                  Layout
+                </h3>
                 <div class="images_container_horizontal">
                   <div class="images_container_vertical">
-                    <img src="static/images/examples/Workflow.png" alt="geometric reasoning" width="50%" />
-                    <img src="static/images/examples/Workflow2.png" width="80%" />
+                    <img src="static/images/examples/RocketDiagram.png" width="30%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <span style="font-weight: bold;">Q:</span> "How many fins does it have?"
+                        <br>
+                        <span style="font-weight: bold;">A:</span> "2"
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> three fins at the base <span
+                          style="color: red;">✗</span>
+                        <br>
+                        <span style="font-weight: bold;">Gemini-1.5-pro:</span> 2 fins <span
+                          style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4V:</span> four <span style="color: red;">✗</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> four <span style="color: red;">✗</span>
+                      </p>
+                    </div>
                   </div>
-                  <img src="static/images/examples/FlowChart.png" width="50%" />
+
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/Layout.jpg" width="40%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <span style="font-weight: bold;">Question:</span> <span style="color: red;">Does the smallest
+                          bedroom have a washroom?</span>
+                        <br>
+                        <span style="font-weight: bold;">Answer:</span> No.
+                        <br>
+                        <span style="font-weight: bold;">Rationale:</span> The smallest bedroom is BedRoom1, and it does
+                        not have a washroom.
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">GPT-4V:</span> Yes. Bedroom2.. <span
+                          style="color: red;">✗</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <h3>
+                  Dashboard
+                </h3>
+                <div class="images_container_vertical">
+                  <div class="images_container_horizontal">
+                    <img src="static/images/examples/Dashboard1.jpg" alt="geometric reasoning" width="51%" />
+                    <img src="static/images/examples/Dashboard2.jpg" width="50%" />
+                  </div>
+                  <div class="has-text-justified is-four-fifths column">
+                    <p>
+                      <span style="font-weight: bold;">Question:</span> Today, I set off for another city 100 kilometers
+                      away. The clock shows my departure time, and the speedometer displays my car's speed. <span
+                        style="color: red;">When will I arrive at the destination?</span>
+                      <br>
+                      <span style="font-weight: bold;">Answer:</span> 10:00 AM.
+                      <br>
+                      <span style="font-weight: bold;">Rationale:</span> Your departure time is 8:00 AM, and your car's
+                      speedometer shows 50 km/h. The distance is 100 km. Therefore, you need to spend two hours on the
+                      road, and you will arrive at the destination at 10:00 AM.
+                    </p>
+                    <p>
+                      <span style="font-weight: bold;">GPT-4V:</span> You will arrive at 9:00. The clock shows 7:00,
+                      which is your departure time.. <span style="color: red;">✗</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="box m-5">
+              <div class="content has-text-centered ">
+                <h3>
+                  Layout
+                </h3>
+                <div class="images_container_horizontal">
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/Instrument2.png" width="100%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <br>
+                        <span style="font-weight: bold;">Q:</span> "What is the reading at the beginning of the
+                        rectangle's length?"
+                        <br>
+                        <span style="font-weight: bold;">A:</span> "2"
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> 0 <span style="color: red;">✗</span>
+                        <br>
+                        <span style="font-weight: bold;">Gemini-1.5-pro:</span> 2 <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4V:</span> 2 <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> 2 <span style="color: green;">✔</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/Instrument.png" width="120%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <br>
+                        <span style="font-weight: bold;">Q:</span> "What is the reading at the beginning of the
+                        rectangle's length?"
+                        <br>
+                        <span style="font-weight: bold;">A:</span> "2"
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> 0 <span style="color: red;">✗</span>
+                        <br>
+                        <span style="font-weight: bold;">Gemini-1.5-pro:</span> 2 <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4V:</span> 2 <span style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> 2 <span style="color: green;">✔</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered ">
+                <h3>
+                  Flow Chart
+                </h3>
+                <div class="images_container_horizontal">
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/Workflow.png" alt="geometric reasoning" width="80%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <br>
+                        <span style="font-weight: bold;">Q:</span> "What is the previous step of 'Clean up'? A. Blend
+                        until smooth B. Taste and adjust C. Pour and serve D. None of the above"
+                        <br>
+                        <span style="font-weight: bold;">A:</span> "C. Pour and serve"
+                      </p>
+                      <p>
+                        <span style="font-weight: bold;">Llava-v1.6-34b:</span> Pour and serve <span
+                          style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">Gemini-1.5-pro:</span> Pour and serve <span
+                          style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4V:</span> Pour and serve <span
+                          style="color: green;">✔</span>
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> Pour and serve <span
+                          style="color: green;">✔</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="images_container_vertical">
+                    <img src="static/images/examples/FlowChart.png" width="200%" />
+                    <div class="has-text-justified">
+                      <p>
+                        <br>
+                        <span style="font-weight: bold;">Question:</span> According to this flowchart, I input the
+                        numbers 2, 3, and 4. <span style="color: red;">What is the final result?</span>
+                        <br>
+                        <span style="font-weight: bold;">Answer:</span> 4. <span
+                          style="font-weight: bold;">Rationale:</span> This algorithm flowchart is designed to find the
+                        maximum of three numbers.
+                        <br>
+                        <span style="font-weight: bold;">GPT-4o:</span> C, which is 4, is the maximum value. Start with
+                        the comparison A > B (2 > 3), which is false... <span style="color: green;">✔</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -403,16 +711,6 @@
         </div>
       </div>
   </section>
-
-  <!-- DATASET SECTION -->
-  <section class="hero is-light is-small">
-    <div class="hero-body has-text-centered">
-      <h1 class="title is-1 mathvista">
-        <span class="model" style="vertical-align: middle">Dataset</span>
-      </h1>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
       <div class="columns is-centered has-text-centered">
@@ -445,19 +743,36 @@
             and aligned reasoning instructions for various daily scenarios, including road maps, dashboards, 2D planar
             layouts, charts, relation graphs, flowcharts, and visual puzzles.
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-full">
           <img src="static/images/examples/Data.jpg" width="90%">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
           <div class="content has-text-justified">
             Firstly, our strategy can autonomously propose a creative idea for visual scenarios, e.g., using a
-            step-by-step flowchart to demonstrate how to attend an academy conference or designing road map . Then it
+            step-by-step flowchart to demonstrate how to attend an academy conference or designing road map . Then
+            it
             generates detailed code to visualize this idea. After synthesizing the desired image, LLMs self-instruct
-            multiple high-quality Q&A pairs for this visual content. The entire process is fully completed by the LLM
+            multiple high-quality Q&A pairs for this visual content. The entire process is fully completed by the
+            LLM
             with a few demonstrations.
 
           </div>
           <div class="content has-text-justified">
             We illustrate the entire process of our image-text synthesis, including using road maps for navigation,
             interpreting pie charts, solving visual puzzles, and using operating workflow. For each scenario, we
-            synthesize multiple questions, annotated answers, and rationales. For example, in the pie chart case, the
+            synthesize multiple questions, annotated answers, and rationales. For example, in the pie chart case,
+            the
             LLM designs a multi-step math question about the difference between the largest and smallest categories.
           </div>
         </div>
@@ -489,7 +804,7 @@
       <div class="columns is-centered has-text-centered">
         <!-- <div class="column is-full-width has-text-centered"> -->
         <div class="column is-full-width">
-          <h2 class="title is-3">Case</h2>
+          <h2 class="title is-3">Case Study</h2>
           <div class="column is-full has-text-centered content">
 
           </div>
@@ -527,15 +842,6 @@
               <div class="images_container_horizontal">
                 <div class="images_container_vertical">
                   <img src="static/images/examples/Case3.png" width="100%" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered ">
-              <div class="images_container_horizontal">
-                <div class="images_container_vertical">
-                  <img src="static/images/examples/Case4.png" width="100%" />
                 </div>
               </div>
             </div>

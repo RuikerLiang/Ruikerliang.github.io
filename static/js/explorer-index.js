@@ -80,7 +80,7 @@ $(document).ready(function () {
 var cache = {};
 var num_output_qs = 5;
 // var 
-
+/*
 var curIndex = 0;
 var timeInterval = 7000;
 setInterval(changeImg, timeInterval);//每隔timeInterval时间，执行一次changeImg事件
@@ -104,6 +104,7 @@ function getRandomSubarray(size, arr = null) {
     }
     return shuffled.slice(0, size);
 }
+*/
 
 function refresh_table(qids) {
     let table = document.getElementById('result-table');
