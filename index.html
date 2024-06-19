@@ -411,10 +411,13 @@
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
+                <h3>
+                  Road Map
+                </h3>
                 <div class="images_container_vertical">
-                  <div class="images_container_horizontal">
-                    <img src="static/images/examples/MapExamples/Map1.png" alt="statistical reasoning" width="20%" />
-                    <img src="static/images/examples/MapExamples/Map2.png" width="20%" />
+                  <div class="images_container_horizontal2">
+                    <img src="static/images/examples/MapExamples/Map1.png" width="30%" />
+                    <img src="static/images/examples/MapExamples/Map2.png" width="30%" />
                   </div>
                   <div class="has-text-justified is-four-fifths column">
                     <p>
@@ -437,7 +440,7 @@
             <div class="box m-5">
               <div class="content has-text-centered">
                 <h3>
-                  Puzzle
+                  Visual Puzzle
                 </h3>
                 <div class="images_container_horizontal">
                   <div class="images_container_vertical">
@@ -529,9 +532,9 @@
                   Dashboard
                 </h3>
                 <div class="images_container_vertical">
-                  <div class="images_container_horizontal">
-                    <img src="static/images/examples/Dashboard1.jpg" alt="geometric reasoning" width="51%" />
-                    <img src="static/images/examples/Dashboard2.jpg" width="50%" />
+                  <div class="images_container_horizontal2">
+                    <img src="static/images/examples/Dashboard1.jpg" width="43%" />
+                    <img src="static/images/examples/Dashboard2.jpg" width="40%" />
                   </div>
                   <div class="has-text-justified is-four-fifths column">
                     <p>
@@ -557,7 +560,7 @@
             <div class="box m-5">
               <div class="content has-text-centered ">
                 <h3>
-                  Layout
+                  2D Planner Layout
                 </h3>
                 <div class="images_container_horizontal">
                   <div class="images_container_vertical">
@@ -608,11 +611,11 @@
             <div class="box m-5">
               <div class="content has-text-centered ">
                 <h3>
-                  Flow Chart
+                  Flowchart
                 </h3>
                 <div class="images_container_horizontal">
                   <div class="images_container_vertical">
-                    <img src="static/images/examples/Workflow.png" alt="geometric reasoning" width="80%" />
+                    <img src="static/images/examples/Workflow.png" alt="geometric reasoning" width="55%" />
                     <div class="has-text-justified">
                       <p>
                         <br>
@@ -667,11 +670,16 @@
       <div class="columns is-centered">
         <div class="column is-full has-text-centered content">
           <h2 class="title is-3" id="leaderboard_title">Leaderboard on Our Benchmark-11k </h2>
-          <p>
-            We evaluate the performance of many representative LMMs using our benchmark containing all tasks . We
-            observe that for these abstract images, even advanced LMMs like GPT-4V and Claude3 achieved only 49.5% and
-            50.1% accuracy on average for all tasks, leaving a significant gap to human-level performance (82.1%).
-          </p>
+
+          <div class="has-text-justified">
+            <p>
+              We evaluate the performance of many representative LMMs using our benchmark containing all tasks . We
+              observe that for these abstract images, even advanced LMMs like GPT-4V and Claude3 achieved only 49.5%
+              and
+              50.1% accuracy on average for all tasks, leaving a significant gap to human-level performance (82.1%).
+
+            </p>
+          </div>
           <div class="content">
             <table id="leaderboard">
               <thead>
@@ -717,16 +725,19 @@
         <!-- <div class="column is-full-width has-text-centered"> -->
         <div class="column is-four-fifths">
           <h2 class="title is-3">Introduction</h2>
-          <div class="content has-text-justified">
-            We identify that current LMMs have a significant gap compared to humans in understanding and visually
-            reasoning about abstract images, such as maps, charts, and layouts. Utilizing LLM and code, We design a
-            multimodal self-instruct strategy to synthesize a diverse set of abstract images and reasoning instructions,
-            providing value data for LMMs. We synthesized a benchmark of 11,193 highquality abstract images, covering
-            eight common scenarios. Our benchmark reveals significant deficiencies even in advanced LMMs. Besides, we
-            synthesized 62,476 chart and road map instructions for fine-tuning, verifying the effectiveness of the
-            synthesized data.
+          <div class="images_container_horizontal">
+            <div class="has-text-justified">
+              We identify that current LMMs have a significant gap compared to humans in understanding and visually
+              reasoning about abstract images, such as maps, charts, and layouts. Utilizing LLM and code, We design a
+              multimodal self-instruct strategy to synthesize a diverse set of abstract images and reasoning
+              instructions,
+              providing value data for LMMs. We synthesized a benchmark of 11,193 highquality abstract images, covering
+              eight common scenarios. Our benchmark reveals significant deficiencies even in advanced LMMs. Besides, we
+              synthesized 62,476 chart and road map instructions for fine-tuning, verifying the effectiveness of the
+              synthesized data.
+            </div>
+            <img src="static/images/examples/Table1.png" width="50%">
           </div>
-          <img src="static/images/examples/Table1.png" width="50%">
         </div>
       </div>
     </div>
@@ -866,11 +877,6 @@
 </section>
 -->
 
-  <section>
-    <div class="section" id="org-banners" style="display:flex">
-      <img class="center-block org-banner" src="static/images/ZJU/ZJU_Big.png">
-    </div>
-  </section>
 
 
   <footer class="footer">
